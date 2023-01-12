@@ -20,7 +20,7 @@ public class AdminController {
 
     @GetMapping
     public String showAdminPage(Model model) {
-        model.addAttribute("userList", userService.listOfUsers());
+        model.addAttribute("userList", userService.getListOfUsers());
         model.addAttribute("roleUser", roleService.getRoleByName("ROLE_USER"));
         model.addAttribute("roleAdmin", roleService.getRoleByName("ROLE_ADMIN"));
         return "adminPage";
